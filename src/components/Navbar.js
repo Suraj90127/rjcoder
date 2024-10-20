@@ -9,7 +9,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <div>
-      <nav className="bg-gray-900 text-white p-4 fixed w-full">
+      <nav className={`bg-gray-700 h-[65px] text-white py-4 w-full`}>
         <div className=" w-[90%] mx-auto flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center">
@@ -123,102 +123,103 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Links */}
-        {/* Mobile Menu Links */}
-        {isOpen && (
-          <div
-            className={`md:hidden flex flex-col space-y-5 items-center text-lg mt-4 bg-gray-800 p-4 roboto-regular
-    ${isOpen ? "animate-slideIn" : "animate-slideOut"}`}
+        {/* {isOpen && ( */}
+        <div
+          className={`md:hidden flex flex-col space-y-5 items-center text-lg mt-[18px] py-4 roboto-regular
+          ${
+            isOpen ? "animate-slideIn h-screen bg-gray-900" : "animate-slideOut"
+          }`}
+        >
+          <NavLink
+            to="/"
+            className={
+              location.pathname === "/"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
           >
-            <NavLink
-              to="/"
-              className={
-                location.pathname === "/"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={
-                location.pathname === "/about"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </NavLink>
-            <NavLink
-              to="/source-code"
-              className={
-                location.pathname === "/source-code"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Source Code
-            </NavLink>
-            <NavLink
-              to="/blogs"
-              className={
-                location.pathname === "/blogs"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Blogs
-            </NavLink>
-            <NavLink
-              to="/courses"
-              className={
-                location.pathname === "/courses"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Courses
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={
-                location.pathname === "/contact"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </NavLink>
-            <NavLink
-              to="/login"
-              className={
-                location.pathname === "/login"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Login
-            </NavLink>
-            <NavLink
-              to="/signup"
-              className={
-                location.pathname === "/signup"
-                  ? "text-orange-400"
-                  : "hover:text-orange-400 text-white"
-              }
-              onClick={() => setIsOpen(false)}
-            >
-              Signup
-            </NavLink>
-          </div>
-        )}
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={
+              location.pathname === "/about"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/source-code"
+            className={
+              location.pathname === "/source-code"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Source Code
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={
+              location.pathname === "/blogs"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Blogs
+          </NavLink>
+          <NavLink
+            to="/courses"
+            className={
+              location.pathname === "/courses"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Courses
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={
+              location.pathname === "/contact"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </NavLink>
+          <NavLink
+            to="/login"
+            className={
+              location.pathname === "/login"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Login
+          </NavLink>
+          <NavLink
+            to="/signup"
+            className={
+              location.pathname === "/signup"
+                ? "text-orange-400"
+                : "hover:text-orange-400 text-white"
+            }
+            onClick={() => setIsOpen(false)}
+          >
+            Signup
+          </NavLink>
+        </div>
+        {/* // )} */}
       </nav>
     </div>
   );
