@@ -1,54 +1,76 @@
 import React from "react";
+import "./style.css";
+import bgImage from "../assets/youtube1.png";
+import ytphone from "../assets/ytmobile.png";
 
 const Home = () => {
+  const videos = [
+    {
+      id: "lpsLAP4x-tk",
+      title: "Learn Complete JavaScript In One Video With 10+ Projects",
+      tags: "Javascript, Html, Css",
+    },
+    {
+      id: "lpsLAP4x-tk",
+      title: "Learn Complete Next.JS 13.4 In One Video By Creating A Website",
+      tags: "Next.Js, React, MongoDB",
+    },
+    {
+      id: "lpsLAP4x-tk",
+      title: "Complete React JS Tutorial In Hindi With 5 Projects In 2023",
+      tags: "ReactJS, HTML, Styled-Comp, Javascript",
+    },
+  ];
   return (
     <div className="bg-gray-900">
-      <div className=" py-20 text-white flex flex-col justify-between px-8">
-        <div className="md:w-[90%] mx-auto flex sm:flex-col md:flex-row justify-between">
-          {/* Text Section */}
-          <div className="md:w-[45%] sm:w-full  space-y-6">
-            <h3 className="text-orange-400 uppercase tracking-wider">
-              Hello and Welcome
-            </h3>
-            <h1 className="sm:text-2xl md:text-5xl font-semibold leading-[60px]">
-              I am <span className="text-orange-400">Suraj Singh </span> <br />{" "}
-              aka rjcoder.
-            </h1>
-            <p className="text-gray-300 text-lg roboto-regular leading-10 tracking-widest">
-              This platform is dedicated to Website Development, Technical
-              Insights, Tips and Tricks, Design Principles, Source Code Sales,
-              and Programming Tutorials, all available in the Hindi language.
-            </p>
+      <div className="md:py-20 sm:py-0 text-white flex flex-col justify-between md:px-8 sm:px-0">
+        <div className="bg-gray-800 text-white py-16 px-8">
+          <div className="md:w-[90%] sm:w-full mx-auto flex flex-col lg:flex-row items-center justify-between">
+            {/* Left Section - Text */}
+            <div className="md:w-[45%] sm:w-full  space-y-6">
+              <h3 className="text-orange-400 uppercase tracking-wider">
+                Hello and Welcome
+              </h3>
+              <h1 className="sm:text-2xl md:text-5xl font-semibold leading-[60px]">
+                I am <span className="text-orange-400">Suraj Singh </span>{" "}
+                <br /> aka rjcoder.
+              </h1>
+              <p className="text-gray-300 text-lg roboto-regular md:leading-10 sm:leading-8 md:tracking-widest sm:tracking-wide">
+                This platform is dedicated to Website Development, Technical
+                Insights, Tips and Tricks, Design Principles, Source Code Sales,
+                and Programming Tutorials, all available in the Hindi language.
+              </p>
 
-            {/* Buttons */}
-            <div className="flex space-x-4 justify-center lg:justify-start">
-              <button className="bg-orange-400 px-6 py-2 rounded-full text-white hover:bg-orange-500 transition">
-                See My Works
-              </button>
-              <button className="border border-orange-400 px-6 py-2 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition">
-                Visit YouTube
-              </button>
+              {/* Buttons */}
+              <div className="flex sm:flex-col md:flex-row justify-center lg:justify-start gap-5">
+                <button className="bg-orange-400 px-6 py-2 rounded-full text-white hover:bg-orange-500 transition">
+                  See My Works
+                </button>
+                <button className="border border-orange-400 px-6 py-2 rounded-full text-orange-400 hover:bg-orange-400 hover:text-white transition">
+                  Visit YouTube
+                </button>
+              </div>
             </div>
-          </div>
 
-          {/* Image Section */}
-          <div className="md:w-[55%] sm:w-full mb-8 lg:mb-0">
-            <div className="w-60 h-60 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-orange-400">
-              <img
-                src="https://via.placeholder.com/300" // Replace with your image URL
-                alt="Vinod Bahadur Thapa"
-                className="w-full h-full object-cover"
-              />
+            {/* Right Section - Image */}
+            <div className="relative mt-12 lg:mt-0">
+              <div className="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-orange-400">
+                <img
+                  src="https://via.placeholder.com/300" // Replace with your image URL
+                  alt="RJ Coder"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="w-full mt-20 flex justify-around">
-          <div className="cursor-pointer">
+        <div className="w-full sm:my-10 md:py-0 flex sm:flex-col md:flex-row justify-around sm:space-y-5 md:space-y-0">
+          <div className="cursor-pointer text-center md:w-[50%] sm:w-full">
             <p>Keep Scrolling</p>
           </div>
-          <div className="flex space-x-8 text-gray-400">
+          <div className="flex text-gray-400 md:w-[50%] sm:w-[90%] mx-auto text-center justify-center gap-5">
             <a href="#" className="hover:text-orange-400 transition">
               Facebook
             </a>
@@ -72,7 +94,7 @@ const Home = () => {
             <h3 className="text-orange-400 uppercase tracking-wide">
               About Me
             </h3>
-            <h1 className="text-3xl lg:text-4xl font-semibold leading-relaxed">
+            <h1 className="sm:text-2xl md:text-3xl  leading-relaxed inter-main">
               I am RJ Coder, a passionate Web Developer and content creator. My
               goal is to help others by sharing knowledge on Web Development,
               Technical Tips, and programming tricks through practical videos.
@@ -113,8 +135,243 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* third section */}
+
+      <div className="bg-gray-900 text-white py-20 px-8">
+        <div className="md:w-[80%] mx-auto flex flex-col md:flex-row justify-between items-center">
+          {/* Left Section - Text Content */}
+          <div className="md:w-[40%] sm:w-full space-y-6">
+            <h3 className="text-orange-400 uppercase tracking-wide">
+              Services
+            </h3>
+            <h1 className="text-4xl font-bold">What I Do</h1>
+            <p className="text-gray-300 leading-relaxed">
+              We offer comprehensive digital services including web design,
+              UI/UX design, app development, and web development. Our expertise
+              spans visually captivating websites, intuitive user interfaces,
+              feature-rich mobile apps, and tailored web solutions.
+            </p>
+          </div>
+
+          {/* Right Section - Services List */}
+          <div className="md:w-[40%] sm:w-full space-y-6 sm:mt-5">
+            {[
+              "WEB DESIGN",
+              "UI/UX DESIGN",
+              "APP DEVELOPMENT",
+              "WEB DEVELOPMENT",
+            ].map((service, index) => (
+              <h2
+                key={index}
+                className="text-3xl md:text-end sm:text-start font-semibold border-b-2 border-transparent hover:border-orange-400 transition"
+              >
+                {service}
+              </h2>
+            ))}
+          </div>
+        </div>
+        {/* Technologies Section */}
+        <div className=" md:w-[80%] mx-auto flex flex-wrap mt-10">
+          {[
+            "HTML",
+            "CSS",
+            "SASS",
+            "JAVASCRIPT",
+            "NEXT.JS",
+            "REACTJS",
+            "NODE.JS",
+            "EXPRESS.JS",
+            "PHP",
+          ].map((tech, index) => (
+            <span
+              key={index}
+              className="text-orange-400 text-lg font-semibold mr-6 mb-4 cursor-pointer "
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* fourth section */}
+
+      <div className="bg-gray-900 text-white md:py-20 sm:py-0 md:px-8 sm:px-0">
+        <div className="md:w-[70%] sm:w-full mx-auto rounded-lg shadow-lg bg-gray-800 py-10 relative">
+          {/* Glow effect on the border */}
+          <div className="absolute inset-0 rounded-lg border border-transparent hover:border-orange-500 transition duration-300 blur-sm"></div>
+
+          {/* Main Content */}
+          <div className="relative z-10">
+            <div className="px-10">
+              <h3 className="text-orange-400 uppercase tracking-wide mb-2">
+                Services Counter
+              </h3>
+              <p className="sm:text-2xl md:text-4xl font-semibold mb-8 md:w-[80%] lineHieght">
+                I have a 10 years of work experience and done lots of projects,
+                freelancing, and designing works.
+              </p>
+            </div>
+
+            {/* Counter Section */}
+            <div className="flex  justify-between md:mt-20 sm:mt-10 md:px-10">
+              <Counter value="120+" label="Projects" />
+              <Counter value="80+" label="Clients" />
+              <Counter value="10+" label="Collaborations" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* youtube section */}
+      <div className="w-[100%] mx-auto">
+        <div
+          className="relative w-[90%] h-[600px] mx-auto  rounded-xl overflow-hidden bg-cover bg-center opacity-100"
+          style={{ backgroundImage: `url(${bgImage})` }}
+        >
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gray-950 bg-opacity-30"></div>
+
+          {/* Main Content */}
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-center h-full px-6 w-[90%] mx-auto">
+            {/* Left Side: Text Section */}
+            <div className="text-center md:text-left md:w-1/2">
+              <h2 className="text-orange-400 uppercase tracking-wide text-sm mb-4">
+                Thapa Technical
+              </h2>
+              <h1 className="text-white sm:text-2xl md:text-3xl font-medium leading-snug mb-6">
+                Start Learning with me by <br /> Subscribing to this Channel
+              </h1>
+              <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-lg">
+                Join me on my YouTube channel dedicated to web development,
+                where you can start your learning journey by subscribing.
+                Explore valuable tutorials, tips, and tricks to enhance your web
+                development skills and stay updated with the latest trends.
+              </p>
+              <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-full font-semibold transition duration-300">
+                Check My YouTube
+              </button>
+            </div>
+            {/* Right Side: Mobile Phone Mockup */}
+            <div className="mt-10 md:mt-0 md:w-1/2 sm:hidden md:flex justify-center">
+              <img
+                src={ytphone}
+                alt="YouTube Mobile View"
+                className="w-80 h-auto rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* playlist section */}
+      <div className="bg-gray-900 py-10 px-5">
+        {/* Stats Section */}
+        <div className="flex justify-around text-center mb-10 text-white">
+          <div>
+            <h2 className="text-3xl font-bold">600K+</h2>
+            <p className="text-gray-400">Subscribers</p>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">10m+</h2>
+            <p className="text-gray-400">Views</p>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold">1Lakh+</h2>
+            <p className="text-gray-400">Videos</p>
+          </div>
+        </div>
+
+        {/* Playlist Section */}
+        <div className="max-w-5xl mx-auto bg-gray-800 rounded-xl border border-orange-600 shadow-lg p-5 md:flex">
+          {/* Left: YouTube Video Embed */}
+          <div className="md:w-1/2">
+            <iframe
+              className="w-full h-64 md:h-80 rounded-lg"
+              src="https://www.youtube.com/embed/your-video-id?controls=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          {/* Right: Text Section */}
+          <div className="md:w-1/2 flex flex-col justify-center md:pl-10 mt-5 md:mt-0 text-white">
+            <h3 className="text-lg text-orange-400 mb-2 uppercase">
+              Youtube Playlist
+            </h3>
+            <h2 className="text-2xl md:text-3xl font-bold leading-snug">
+              Check out the latest{" "}
+              <span className="text-orange-500">MERN Series Website</span>{" "}
+              tutorial in Hindi
+            </h2>
+
+            <button className="mt-5 w-40 bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-full">
+              Open Playlist
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* populor video section */}
+      <div className="bg-gray-900 py-16 px-6 md:w-[80%] sm:w-[90%] mx-auto">
+        {/* Header Section */}
+        <div className="flex justify-between items-center mb-10">
+          <div>
+            <p className="text-orange-400 uppercase tracking-widest text-sm">
+              Videos
+            </p>
+            <h1 className="text-white md:text-3xl sm:text-xl font-bold">
+              Popular Videos on Youtube
+            </h1>
+          </div>
+          <button className="text-orange-400 hover:underline">
+            View All Videos
+          </button>
+        </div>
+
+        {/* Video Cards Section */}
+        <div className="grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3">
+          {videos.map((video, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+            >
+              {/* Embedded YouTube Video */}
+              <div className="relative overflow-hidden pb-[56.25%]">
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              {/* Video Details */}
+              <div className=" text-white mt-10">
+                <p className="text-gray-400 text-sm mb-1">{video.tags}</p>
+                <h2 className="text-lg font-semibold leading-snug">
+                  {video.title}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
+
+const Counter = ({ value, label }) => (
+  <div className="text-center sm:text-left sm:mx-4 mb-6 sm:mb-0">
+    <h2 className="sm:text-[40px] md:text-8xl font-bold text-gray-600">
+      {value}
+    </h2>
+    <p className="text-sm font-semibold uppercase text-white tracking-wider md:ml-5 ml-0">
+      {label}
+    </p>
+  </div>
+);
 
 export default Home;
