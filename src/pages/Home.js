@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
-import bgImage from "../assets/youtube1.png";
-import ytphone from "../assets/ytmobile.png";
+import bgImage from "../Assets/youtube1.png";
+import ytphone from "../Assets/ytmobile.png";
 
 const Home = () => {
   const videos = [
