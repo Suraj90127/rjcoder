@@ -37,9 +37,9 @@ const Navbar = () => {
               Home
             </NavLink>
             <NavLink
-              to="/about"
+              to="/about-us"
               className={
-                location.pathname === "/about"
+                location.pathname === "/about-us"
                   ? "text-orange-400"
                   : "hover:text-orange-400 text-white"
               }
@@ -142,9 +142,9 @@ const Navbar = () => {
             Home
           </NavLink>
           <NavLink
-            to="/about"
+            to="/about-us"
             className={
-              location.pathname === "/about"
+              location.pathname === "/about-us"
                 ? "text-orange-400"
                 : "hover:text-orange-400 text-white"
             }

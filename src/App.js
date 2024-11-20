@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import About from "./pages/About";
+import Blog from "./pages/Blog";
+import Contect from "./pages/Contect";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       {/* Routes should only contain Route or React.Fragment components */}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/blogs" element={<Blog />} />
+        <Route path="/contact" element={<Contect />} />
       </Routes>
       <Footer />
     </Router>

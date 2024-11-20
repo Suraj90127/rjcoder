@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import bgImage from "../assets/youtube1.png";
 import ytphone from "../assets/ytmobile.png";
@@ -21,6 +21,35 @@ const Home = () => {
       tags: "ReactJS, HTML, Styled-Comp, Javascript",
     },
   ];
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  // Handle form input change
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    // Reset form after submission (optional)
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
+
   return (
     <div className="bg-gray-900">
       <div className="md:py-20 sm:py-0 text-white flex flex-col justify-between md:px-8 sm:px-0">
@@ -225,14 +254,14 @@ const Home = () => {
       {/* youtube section */}
       <div className="w-[100%] mx-auto">
         <div
-          className="relative w-[90%] h-[600px] mx-auto  rounded-xl overflow-hidden bg-cover bg-center opacity-100"
+          className="relative w-[90%] md:h-[600px] sm:h-auto py-5 mx-auto  rounded-xl overflow-hidden bg-cover bg-center opacity-100"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-gray-950 bg-opacity-30"></div>
 
           {/* Main Content */}
-          <div className="relative z-10 flex flex-col md:flex-row items-center justify-center h-full px-6 w-[90%] mx-auto">
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-center h-full md:px-6 w-[90%] mx-auto">
             {/* Left Side: Text Section */}
             <div className="text-center md:text-left md:w-1/2">
               <h2 className="text-orange-400 uppercase tracking-wide text-sm mb-4">
@@ -306,21 +335,21 @@ const Home = () => {
               tutorial in Hindi
             </h2>
 
-            <button className="mt-5 w-40 bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-full">
+            <button className="mt-5 w-52 bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-full">
               Open Playlist
             </button>
           </div>
         </div>
       </div>
       {/* populor video section */}
-      <div className="bg-gray-900 py-16 px-6 md:w-[80%] sm:w-[90%] mx-auto">
+      <div className="bg-gray-900 py-16 md:px-6 md:w-[80%] sm:w-[90%] mx-auto">
         {/* Header Section */}
         <div className="flex justify-between items-center mb-10">
           <div>
             <p className="text-orange-400 uppercase tracking-widest text-sm">
               Videos
             </p>
-            <h1 className="text-white md:text-3xl sm:text-xl font-bold">
+            <h1 className="text-white md:text-3xl sm:text-xl font-bold mt-5">
               Popular Videos on Youtube
             </h1>
           </div>
@@ -334,7 +363,7 @@ const Home = () => {
           {videos.map((video, index) => (
             <div
               key={index}
-              className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow hover:border-2"
             >
               {/* Embedded YouTube Video */}
               <div className="relative overflow-hidden pb-[56.25%]">
@@ -355,8 +384,200 @@ const Home = () => {
                   {video.title}
                 </h2>
               </div>
+              {/* butoon */}
+
+              <div className="mt-5">
+                <button className="mt-5 w-52 bg-orange-700 hover:bg-orange-600 text-white px-4 py-2 rounded-full">
+                  Get Started
+                </button>
+              </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Projects & Source Codes */}
+
+      <div className="md:w-[80%] sm:w-[90%] mx-auto">
+        <div className="bg-gray-900 py-16 md:px-6">
+          {/* Header Section */}
+          <div className="flex justify-between items-center mb-10">
+            <div>
+              <p className="text-orange-400 uppercase tracking-widest text-sm">
+                Projects
+              </p>
+              <h1 className="text-white sm:text-2xl md:text-4xl font-bold mt-5">
+                Projects & Source Codes
+              </h1>
+            </div>
+            <button className="text-orange-400 hover:underline">
+              View All Projects
+            </button>
+          </div>
+
+          {/* Project Card Section */}
+          <div className="bg-gray-800 rounded-xl md:p-8 sm:p-4 shadow-lg flex flex-col lg:flex-row items-center lg:items-start gap-6">
+            {/* Image Section */}
+            <div className="flex-shrink-0 w-full lg:w-1/3">
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Source Code Sale"
+                className="rounded-lg object-cover w-full"
+              />
+            </div>
+
+            {/* Content Section */}
+            <div className="flex-grow">
+              <h2 className="text-white text-2xl font-bold">
+                Thapa Source Code Sale
+              </h2>
+              <div className="flex sm:flex-col md:flex-row justify-between">
+                <div>
+                  <p className="text-gray-300 mt-4">
+                    Are you looking for high-quality, ready-to-use website
+                    source code? Look no further! Our collection of more than
+                    10+ projects & websites has everything you need to get
+                    started on your next project.
+                  </p>
+                  <div className="mt-6 flex gap-4">
+                    <button className="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-md transition">
+                      Buy Source Code
+                    </button>
+                    <button className="bg-green-700 hover:bg-green-800 text-white px-4 py-2 rounded-md transition">
+                      Read More
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full lg:w-1/4 flex-shrink-0 mt-6 lg:mt-0 lg:ml-10">
+                  <ul className="text-gray-400 md:space-y-2 text-xl flex flex-wrap gap-3">
+                    <li className="font-semibold">React JS</li>
+                    <li className="font-semibold">Express JS</li>
+                    <li className="font-semibold">Node JS</li>
+                    <li className="font-semibold">Mongo DB</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Buttons */}
+            </div>
+
+            {/* Tech Stack Section */}
+          </div>
+        </div>
+      </div>
+
+      {/* form data */}
+
+      <div className="bg-gray-900 py-16 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left Section */}
+          <div>
+            <p className="text-orange-400 uppercase tracking-widest text-sm mb-2">
+              Contact Us
+            </p>
+            <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">
+              Have a <span className="text-orange-400">Project</span> or want to{" "}
+              <span className="text-orange-400">Collaborate</span>?
+            </h1>
+            <p className="text-gray-300 mb-8">
+              We would love to hear from you. Drop a message.
+            </p>
+            <div className="bg-gray-800 rounded-lg p-6 mb-6">
+              <p className="text-gray-400 mb-1">Location</p>
+              <h2 className="text-white text-lg font-semibold">
+                Pune, Maharashtra
+              </h2>
+              <p className="text-gray-400 mt-4 mb-1">Mail at</p>
+              <h2 className="text-white text-lg font-semibold">
+                vinodthapavlog@gmail.com
+              </h2>
+              <p className="text-gray-400 mt-4 mb-1">Follow on</p>
+              <div className="flex gap-4 mt-2">
+                <a href="#" className="text-orange-400 hover:underline">
+                  Facebook
+                </a>
+                <a href="#" className="text-orange-400 hover:underline">
+                  Instagram
+                </a>
+                <a href="#" className="text-orange-400 hover:underline">
+                  Discord
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div>
+            <form
+              onSubmit={handleSubmit}
+              className="bg-gray-800 rounded-lg p-6"
+            >
+              <h2 className="text-white text-2xl font-semibold mb-6">
+                Send a message
+              </h2>
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-1" htmlFor="name">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Enter Your Name."
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-1" htmlFor="email">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter Your Email. "
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-1" htmlFor="subject">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="I need help!"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-400 mb-1" htmlFor="message">
+                  Description
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Type your message"
+                  className="w-full px-4 py-2 rounded-md bg-gray-700 text-white h-32 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-md transition w-full lg:w-auto"
+              >
+                Send message →
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
