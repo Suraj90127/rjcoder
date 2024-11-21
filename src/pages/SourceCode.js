@@ -81,7 +81,7 @@ const SourceCode = () => {
         <h2 className="text-2xl font-bold mb-6">Get Awesome Project Codes for Free</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectCards.map((card) => (
-            <div key={card.title} className="bg-gray-800 p-4 rounded-lg flex flex-col justify-between">
+            <div key={card.title} className="bg-gray-800 p-4 rounded-lg flex flex-col justify-between hover:border-[1px] border-orange-500">
               <div className="w-full h-auto text-center py-2 rounded-t-lg">
               <img src={card.img} alt="img" />
               </div>
