@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contect from "./pages/Contect";
 import LoginRegister from "./pages/LoginRegister";
+import SourceCode from "./pages/SourceCode";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/contact" element={<Contect />} />
+        <Route path="/source-code" element={<SourceCode />} />
         <Route path="/login" element={<LoginRegister />} />
       </Routes>
       <Footer />
