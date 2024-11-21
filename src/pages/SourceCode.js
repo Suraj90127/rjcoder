@@ -36,7 +36,8 @@ const SourceCode = () => {
       </div>
       <div className="flex-1 p-8 bg-gray-800 max-w-md">
         <h2 className="text-2xl font-bold mb-4">Your Path to Full-Stack Success with Thapa Technical</h2>
-        <p className="text-xl mb-4">Time Remaining: 39:47:13</p>
+        <p className="text-xl mb-4">Time Remaining:</p>
+        <p className="text-3xl font-bold mb-4"> 39:47:13</p>
         <ul className="space-y-2 mb-6">
           <li>HTML Complete Code - 2025</li>
           <li>CSS Complete Code - 2025</li>
@@ -80,11 +81,11 @@ const SourceCode = () => {
         <h2 className="text-2xl font-bold mb-6">Get Awesome Project Codes for Free</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projectCards.map((card) => (
-            <div key={card.title} className="bg-gray-800 p-4 rounded-lg">
+            <div key={card.title} className="bg-gray-800 p-4 rounded-lg flex flex-col justify-between">
               <div className="w-full h-auto text-center py-2 rounded-t-lg">
               <img src={card.img} alt="img" />
               </div>
-              <div className="p-4">
+              <div className="p-4 ">
                 <h3 className="text-lg font-bold text-center">{card.title}</h3>
                 <p className="text-sm text-center mt-2">{card.description}</p>
                 <button className="mt-4 w-full px-4 py-2 rounded-md bg-green-600 hover:bg-green-700">Download</button>
