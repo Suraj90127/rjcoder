@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contect from "./pages/Contect";
+import LoginRegister from "./pages/LoginRegister";
 import SourceCode from "./pages/SourceCode";
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Route path="/source-code" element={<SourceCode />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/contact" element={<Contect />} />
+        <Route path="/source-code" element={<SourceCode />} />
+        <Route path="/login" element={<LoginRegister />} />
       </Routes>
       <Footer />
     </Router>
