@@ -1,11 +1,9 @@
-
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function LoginRegister() {
-  const [isLogin, setIsLogin] = useState(true)
-
-  const toggleForm = () => setIsLogin(!isLogin)
+  const [isLogin, setIsLogin] = useState(true);
+  const toggleForm = () => setIsLogin(!isLogin);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-[#111827]">
@@ -22,12 +20,18 @@ export default function LoginRegister() {
           <form>
             <motion.div
               initial={false}
-              animate={{ height: isLogin ? "auto" : 0, opacity: isLogin ? 1 : 0 }}
+              animate={{
+                height: isLogin ? "auto" : 0,
+                opacity: isLogin ? 1 : 0,
+              }}
               transition={{ duration: 0.3 }}
               className="space-y-4 overflow-hidden"
             >
               <div>
-                <label htmlFor="email-login" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="email-login"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -39,7 +43,10 @@ export default function LoginRegister() {
                 />
               </div>
               <div>
-                <label htmlFor="password-login" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="password-login"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Password
                 </label>
                 <input
@@ -52,12 +59,18 @@ export default function LoginRegister() {
             </motion.div>
             <motion.div
               initial={false}
-              animate={{ height: isLogin ? 0 : "auto", opacity: isLogin ? 0 : 1 }}
+              animate={{
+                height: isLogin ? 0 : "auto",
+                opacity: isLogin ? 0 : 1,
+              }}
               transition={{ duration: 0.3 }}
               className="space-y-4 overflow-hidden"
             >
               <div>
-                <label htmlFor="name-register" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="name-register"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -69,7 +82,10 @@ export default function LoginRegister() {
                 />
               </div>
               <div>
-                <label htmlFor="email-register" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="email-register"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -81,7 +97,10 @@ export default function LoginRegister() {
                 />
               </div>
               <div>
-                <label htmlFor="password-register" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="password-register"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Password
                 </label>
                 <input
@@ -92,7 +111,10 @@ export default function LoginRegister() {
                 />
               </div>
               <div>
-                <label htmlFor="confirm-password" className="block text-sm font-medium text-white mb-1">
+                <label
+                  htmlFor="confirm-password"
+                  className="block text-sm font-medium text-white mb-1"
+                >
                   Confirm Password
                 </label>
                 <input
@@ -124,6 +146,5 @@ export default function LoginRegister() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
