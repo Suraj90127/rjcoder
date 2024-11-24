@@ -5,22 +5,22 @@ import html from '../Assets/htmlcssjs.avif'
 import next from '../Assets/nextjs.avif'
 import { FaCircleArrowRight } from 'react-icons/fa6'
 const projectCards = [
-    {
-      title: "BOOTSTRAP5 WEBSITE",
-      img: Bootstrap,
-      description: "Complete Bootstrap v5.3 Tutorial Source Code",
-    },
-    {
-      title: "FULLSTACK NEXT.JS",
-      img: next,
-      description: "Next.js 13.4 FullStack website source code",
-    },
-    {
-      title: "PROFESSIONAL WEBSITE",
-      img: html,
-      description: "Typing Speed Test website using HTML, CSS and JavaScript",
-    },
-  ]
+  {
+    title: "BOOTSTRAP5 WEBSITE",
+    img: Bootstrap,
+    description: "Complete Bootstrap v5.3 Tutorial Source Code",
+  },
+  {
+    title: "FULLSTACK NEXT.JS",
+    img: next,
+    description: "Next.js 13.4 FullStack website source code",
+  },
+  {
+    title: "PROFESSIONAL WEBSITE",
+    img: html,
+    description: "Typing Speed Test website using HTML, CSS and JavaScript",
+  },
+];
 const SourceCode = () => {
   const [timeRemaining, setTimeRemaining] = useState("");
   const [showFields, setShowFields] = useState(false);
@@ -188,7 +188,7 @@ const SourceCode = () => {
       </section>
     </div>
     </div>
-  )
-}
+  );
+};
 
-export default SourceCode
+export default SourceCode;
