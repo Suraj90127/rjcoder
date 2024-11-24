@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import banner from '../Assets/source-code.avif'
-import Bootstrap from '../Assets/bootstrap.avif'
-import html from '../Assets/htmlcssjs.avif'
-import next from '../Assets/nextjs.avif'
+import banner from '../assets/source-code.avif'
+import Bootstrap from '../assets/bootstrap.avif'
+import html from '../assets/htmlcssjs.avif'
+import next from '../assets/nextjs.avif'
 import { FaCircleArrowRight } from 'react-icons/fa6'
 const projectCards = [
   {
