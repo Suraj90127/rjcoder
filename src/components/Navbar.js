@@ -8,8 +8,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   return (
-    <div>
-      <nav className={`bg-gray-700 h-[65px] text-white py-4 w-full`}>
+    <div className="fixed w-full z-50">
+      <nav className={`bg-gray-800 h-[65px] text-white py-4 w-full`}>
         <div className=" w-[90%] mx-auto flex justify-between items-center">
           {/* Logo Section */}
           <div className="flex items-center">
@@ -127,7 +127,7 @@ const Navbar = () => {
         <div
           className={`md:hidden flex flex-col space-y-5 items-center text-lg mt-[18px] py-4 roboto-regular
           ${
-            isOpen ? "animate-slideIn h-screen bg-gray-900" : "animate-slideOut"
+            isOpen ? "animate-slideIn h-screen bg-gray-800" : "animate-slideOut"
           }`}
         >
           <NavLink
